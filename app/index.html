@@ -22,7 +22,24 @@
         <div class="donation-header__white">
           <h1 class="donation-header__title">Donations</h1>
         </div>
-        <div class="donation-header__gray">            
+        <div class="donation-header__gray">   
+          <div class="filter-wrapper">          
+            <ul class="filter-wrapper__list">
+                <li class="filter-wrapper__item">                  
+                  <a tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/change.svg" alt="">Change amount</a>
+                </li>
+                <li class="filter-wrapper__item">                  
+                  <a tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/payment.svg" alt="">Change payment method</a>
+                </li>
+                <li class="filter-wrapper__item">
+                  
+                  <a tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/date.svg" alt="">Change date</a>
+                </li>
+                <li class="filter-wrapper__item">                  
+                  <a  tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/cancel.svg" alt="">Cancel recurring</a>
+                </li>
+            </ul>
+          </div>         
             <div class="donation-header__block">
               <form role="search">
                 <input class="donation-header__search" type="search" id="mySearch" name="q"
@@ -31,7 +48,7 @@
               </form>     
             </div>   
             <div class="donation-header__dropdown">
-              <div class="dropdown-wrapper" tabindex="1">
+              <div class="dropdown-wrapper" tabindex="0">
                 <span class="dropdown-wrapper__header">All statuses</span>
               
                 <ul class="dropdown-wrapper__list">
@@ -55,9 +72,9 @@
                 <p class="donation-summ__type donation">Donation</p>
                 <p class="donation-summ__amounts">$20.60 USD <span class="donation-summ__euro">≈ €17.92 EUR</span></p>
               </div>
-              <div class="donation-id">
+              <div class="donation-id" tabindex="0">
                 <h4 class="donation-id__label">ID </h4>
-                <p class="donation-id__value">TYNY694Y <span class="donation-id__imgw"><img class="donation-id__img" src="./dist/assets/img/copy.svg" alt=""></span></p>
+                <p class="donation-id__value"><span class="donation-id__text">TYNY694Y</span> <span class="donation-id__imgw"><img class="donation-id__img" src="./dist/assets/img/copy.svg" alt=""></span></p>
               </div>
             </div>
             <div class="donation-widget-b__gray">
@@ -83,23 +100,28 @@
           </div>
           <article class="widget-settings">
             <div class="widget-settings__content">
+              <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-1" checked>
+              <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-2">
+              <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-3">
+              <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-4">
+              <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-5">
               <div class="widget-settings__tabbed">
-                <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-1" checked>
-                <label class="widget-settings__label" for="tab-nav-1">Behavior</label>
+                <ul class="tablist">
+                  <li class="tablist__item" data-tabs="tab-1">
+                    <label class="widget-settings__label tab-1-item" for="tab-nav-1">Behavior</label></li>
+                  <li class="tablist__item" data-tabs="tab-2">
+                      <label class="widget-settings__label tab-2-item" for="tab-nav-2">Appearance</label></li>
+                  <li  class="tablist__item" data-tabs="tab-3">
+                    <label class="widget-settings__label tab-3-item" for="tab-nav-3">Custom Fields </label></li>
+                  <li class="tablist__item" data-tabs="tab-4">
+                    <label class="widget-settings__label tab-4-item" for="tab-nav-4">Questions</label></li>
+                  <li class="tablist__item" data-tabs="tab-5">
+                    <label class="widget-settings__label tab-5-item" for="tab-nav-5">URL Control</label></li>
+           
+                </ul>          
             
-                <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-2">
-                <label class="widget-settings__label" for="tab-nav-2">Appearance</label>
-            
-                <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-3">
-                <label class="widget-settings__label" for="tab-nav-3">Custom Fields </label>
-            
-                <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-4">
-                <label class="widget-settings__label" for="tab-nav-4">Questions</label>
-
-                <input class="widget-settings__input" type="radio" name="tabs" id="tab-nav-5">
-                <label class="widget-settings__label" for="tab-nav-5">URL Control</label>
                 <div class="widget-settings__tabs">
-                  <div class="widget-settings__inner">
+                  <div class="widget-settings__inner tab-1">
                     <form class="widget-settings__form" action="/" method="post">
                       <fieldset class="widget-settings__fieldset column-1">
                         <label class="widget-settings__label">Designation</label>
@@ -134,15 +156,15 @@
                         <div class="widget-settings__right wrap">                          
                           <div class="form_radio">
                             <input id="radio-1" type="radio" name="radio" value="1" checked>
-                            <label for="radio-1">Match Checkout Setting</label>
+                            <label tabindex="0" for="radio-1">Match Checkout Setting</label>
                           </div>
                           <div class="form_radio">
                             <input id="radio-2" type="radio" name="radio" value="2">
-                            <label for="radio-2">Customize</label>
+                            <label  tabindex="0" for="radio-2">Customize</label>
                           </div>
                           <div class="form_checkbox">
-                            <input id="checkbox-1" type="checkbox" value="terms">
-                            <label for="checkbox-1"> Allow donor to change default currency</label>                           
+                            <input id="checkbox-10" type="checkbox" value="terms">
+                            <label tabindex="0" for="checkbox-10"> Allow donor to change default currency</label>                           
                           </div>
                         </div>
                         
@@ -175,7 +197,7 @@
                       </fieldset>
                     </form>
                   </div>
-                  <div class="widget-settings__inner">
+                  <div class="widget-settings__inner tab-2">
                     <div class="widget-settings__inner">
                       <form class="widget-settings__form" action="/" method="post">
                         <fieldset class="widget-settings__fieldset column-1">
@@ -253,7 +275,7 @@
                       </form>
                     </div>
                   </div>
-                  <div class="widget-settings__inner">
+                  <div class="widget-settings__inner tab-3">
                     <div class="widget-settings__inner">
                       <form class="widget-settings__form" action="/" method="post">
                         <fieldset class="widget-settings__fieldset column-1">
@@ -331,7 +353,7 @@
                       </form>
                     </div>
                   </div>
-                  <div class="widget-settings__inner">
+                  <div class="widget-settings__inner tab-4">
                     <div class="widget-settings__inner">
                       <form class="widget-settings__form" action="/" method="post">
                         <fieldset class="widget-settings__fieldset column-1">
@@ -409,7 +431,7 @@
                       </form>
                     </div>
                   </div>
-                  <div class="widget-settings__inner">
+                  <div class="widget-settings__inner tab-5">
                     <div class="widget-settings__inner">
                       <form class="widget-settings__form" action="/" method="post">
                         <fieldset class="widget-settings__fieldset column-1">
@@ -497,17 +519,17 @@
           <div class="filter-wrapper">          
             <ul class="filter-wrapper__list">
                 <li class="filter-wrapper__item">                  
-                  <a class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/change.svg" alt="">Change amount</a>
+                  <a tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/change.svg" alt="">Change amount</a>
                 </li>
                 <li class="filter-wrapper__item">                  
-                  <a class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/payment.svg" alt="">Change payment method</a>
+                  <a tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/payment.svg" alt="">Change payment method</a>
                 </li>
                 <li class="filter-wrapper__item">
                   
-                  <a class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/date.svg" alt="">Change date</a>
+                  <a tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/date.svg" alt="">Change date</a>
                 </li>
                 <li class="filter-wrapper__item">                  
-                  <a class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/cancel.svg" alt="">Cancel recurring</a>
+                  <a  tabindex="0" class="filter-wrapper__link" href="#"><img class="filter-wrapper__img" src="./dist/assets/img/cancel.svg" alt="">Cancel recurring</a>
                 </li>
             </ul>
           </div>
